@@ -1,0 +1,59 @@
+2018-12-24 13:40:33 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: wuba)
+2018-12-24 13:40:33 [scrapy.utils.log] INFO: Versions: lxml 4.2.3.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.19.0, Twisted 18.9.0, Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)], pyOpenSSL 18.0.0 (OpenSSL 1.1.0j  20 Nov 2018), cryptography 2.4.2, Platform Windows-7-6.1.7601-SP1
+2018-12-24 13:40:33 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'wuba', 'LOG_FILE': 'mySpider.log', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'wuba.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['wuba.spiders']}
+2018-12-24 13:40:33 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2018-12-24 13:40:33 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-12-24 13:40:33 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-12-24 13:40:33 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2018-12-24 13:40:33 [scrapy.core.engine] INFO: Spider opened
+2018-12-24 13:40:33 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-12-24 13:40:34 [scrapy.core.scraper] ERROR: Spider error processing <GET https://callback.58.com/firewall/verifycode?serialId=ec0e34892616aa2347ca18dacd32b04a_4abb0deda1d84cdd947a94718daf72b4&code=22&sign=6da55fa9e2a4c7f56b16a6567d1052ea&namespace=ershoufanglistphp&url=https%3A%2F%2Fnj.58.com%2Fershoufang%2F0%2F> (referer: None)
+Traceback (most recent call last):
+  File "d:\python36-32\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\py\wuba\wuba\spiders\WubaSpider.py", line 16, in parse
+    log.logger(len(li_list)+"")
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+2018-12-24 13:40:34 [scrapy.core.engine] INFO: Closing spider (finished)
+2018-12-24 13:40:34 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1561,
+ 'downloader/request_count': 5,
+ 'downloader/request_method_count/GET': 5,
+ 'downloader/response_bytes': 5095,
+ 'downloader/response_count': 5,
+ 'downloader/response_status_count/200': 3,
+ 'downloader/response_status_count/302': 1,
+ 'downloader/response_status_count/307': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 12, 24, 5, 40, 34, 440880),
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7,
+ 'response_received_count': 3,
+ 'scheduler/dequeued': 2,
+ 'scheduler/dequeued/memory': 2,
+ 'scheduler/enqueued': 2,
+ 'scheduler/enqueued/memory': 2,
+ 'spider_exceptions/TypeError': 1,
+ 'start_time': datetime.datetime(2018, 12, 24, 5, 40, 33, 935851)}
+2018-12-24 13:40:34 [scrapy.core.engine] INFO: Spider closed (finished)
